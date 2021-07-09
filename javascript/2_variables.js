@@ -3,8 +3,6 @@
 2.can start with letter, numbers, or $
 3.Are case sensitive 
 
-this is change we wnat delelte defore git tutotual
-yuturty fgrtf
 
 */
 
