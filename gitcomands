@@ -3,5 +3,7 @@
 3. git init
 4. git add .
 5. git commit -m "remark"
-6. 
+6. git config --global user.name
+7. git config --global user.email
+8. 
 
