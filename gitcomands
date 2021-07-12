@@ -7,5 +7,6 @@
 7. git config --global user.email
 8. git push -u origin main
 9. git rm ".vscode/settings.json"
+10. git restore .
 
 
