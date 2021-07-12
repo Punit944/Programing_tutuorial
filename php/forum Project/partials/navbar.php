@@ -16,34 +16,51 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
+                        TopCategories
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./Contact.php">Contact</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+            <form class="d-flex" action="search.php" method="get">
+                <input class="form-control me-2"  name="search"type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            <div class="logbtn m-1">
-                <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#LoginModal">
-                    Login
-                </button>
-                <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#SignupModal">
-                    Singup
-                </button>
+            <?php 
+            session_start();
+            if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+            {
+                echo '<div class="logbtn m-1">
+                    <a href="partials/_logout.php" type="button" class="btn btn-outline-primary m-1" >
+                        Logout
+                    </a>
+            
+                </div>';
+                
+                                             
 
-            </div>
+                
+            }
+            else
+            {
+                echo '<div class="logbtn m-1">
+                    <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                        Login
+                    </button>
+                    <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#SignupModal">
+                        Singup
+               </button>
+    
+                </div>';
+                
+                
+             }
+            ?>
         </div>
     </div>
 </nav>

@@ -16,11 +16,23 @@ include "partials/_dbconnect.php";
 
     <title>iDisucss</title>
 </head>
-
 <body>
 
     <!-- navbar php -->
-    <?php include "partials/navbar.php";?>
+    <?php 
+    if(isset($_GET['error']))
+    {
+        $alert = $_GET['error'];
+        $alertmass =$_GET['mass'];
+
+        echo '<div class="m-0 alert alert-'.$alert.' alert-dismissible fade show" role="alert">
+        '.$alertmass.'<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
+        
+    }
+    
+    include "partials/navbar.php";
+    ?>
 
     <!-- slider start here -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -34,21 +46,21 @@ include "partials/_dbconnect.php";
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://source.unsplash.com/1600x700/?coding,computer" class="d-block w-100" alt="...">
+                <img src="img/side11.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/1600x700/?server,computer" class="d-block w-100" alt="...">
+                <img src="img/side10.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/1600x700/?programmers,computer" class="d-block w-100" alt="...">
+                <img src="img/side4.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
@@ -72,9 +84,9 @@ include "partials/_dbconnect.php";
 
     <div class="container">
         <h2 class="text-center m-2">iDisucss - Categories</h2>
-        
+
         <div class="row d-flex justify-content-center">
-        <?php  
+            <?php  
         $sql = "SELECT * FROM `categories`";
         $result = mysqli_query($conn,$sql);
         while($row = mysqli_fetch_assoc($result))
@@ -83,17 +95,21 @@ include "partials/_dbconnect.php";
             $Cardtitle = $row['category_name'];
             $Carddesc = $row['category_description'];
             echo "<div class='card m-2 shadow-lg p-3 mb-5 bg-body rounded' style='width: 18rem;'>
-                <img src='https://source.unsplash.com/1600x900/?computer,".$Cardtitle."class='card-img-top' alt='...'>
+                <img src='img/".$Cardtitle.".jpeg' class='card-img-top' alt='...'>
                 <div class='card-body'>
                     <h5 class='card-title'>".$Cardtitle."</h5>
-                    <p class='card-text'>".$Carddesc."</p>
-                    <a href='#' class='btn btn-primary'>View Threads</a>
+                    <p class='card-text'>".substr($Carddesc,0,90)."...</p>
+                    <a href='threadlist.php?catid=".$Cardid."'class='btn btn-primary'>View Threads</a>
                 </div>
             </div>";
         }
       ?>
-      </div> 
-   </div>
+        </div>
+    </div>
+
+    <?php 
+     include "partials/foter.php";
+    ?>
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
