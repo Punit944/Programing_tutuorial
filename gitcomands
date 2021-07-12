@@ -1,0 +1,12 @@
+1. git --version
+2. git status
+3. git init
+4. git add .
+5. git commit -m "remark"
+6. git config --global user.name
+7. git config --global user.email
+8. git push -u origin main
+9. git rm ".vscode/settings.json"
+10. git restore .
+
+
