@@ -5,5 +5,6 @@
 5. git commit -m "remark"
 6. git config --global user.name
 7. git config --global user.email
-8. 
+8. git push -u origin main
+
 
