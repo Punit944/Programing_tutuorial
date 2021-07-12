@@ -1,5 +1,7 @@
 1. git --version
 2. git status
 3. git init
-
+4. git add .
+5. git commit -m "remark"
+6. 
 
