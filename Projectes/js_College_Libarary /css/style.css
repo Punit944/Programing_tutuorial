@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.navigation
+{
+  display: flex;
+  justify-content: space-between;
+}
+.nav-left
+{
+  display: flex;
+  
+}
+
+.nav-left ul{
+  display: flex;
+}
+
+.nav-left ul li{
+}
