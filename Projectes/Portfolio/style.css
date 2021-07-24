@@ -1,0 +1,289 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    scroll-behavior: smooth;
+}
+
+section
+{
+    padding: 100px;
+}
+.banner
+{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url("img/side9.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    opacity: 0.9;
+}
+
+.banner h2
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.3em;
+    letter-spacing: 2px;
+}
+
+.banner h2 span
+{
+    font-size: 1.5em;
+    font-weight: 600;    
+    letter-spacing: 2px;
+}
+
+.banner h3
+{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.6em;
+    letter-spacing: 2px;
+}
+
+.btn
+{
+    position: relative;
+    background: #2196f3;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: 2px solid #2196f3;
+}
+
+.btn:hover
+{
+    background: transparent;
+}
+
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    width: 100%;
+    padding: 15px 10px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo
+{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+}
+
+header ul li
+{
+    position: relative;
+    list-style: none;
+    padding: 20px 0px;
+    
+}
+
+header ul li:hover
+{
+    background-color: #2196f3;
+}
+
+header ul li a
+{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+.heading    
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.heading h2
+{
+    font-weight: 550;
+    font-size: 4.0em;
+}
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenBx
+{
+    padding-right: 30px;
+}
+
+.contenBx h3
+{
+    font-size: 3em;
+    font-weight: 500;
+    
+}
+.contenBx p
+{
+    font-size: 1.6em;
+    font-weight: 400;    
+    line-height: 1.3em;    
+}
+
+.w50
+{
+    min-width: 50%;
+}
+
+.services
+{
+    background: #111;
+    
+}
+
+.services .heading
+{
+    color: #fff;
+    
+}
+.services .heading p
+{
+    font-size: 1.4em;
+}
+
+.services .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx
+{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 500px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover
+{
+    background-color:  #2196f3;
+}
+
+
+.services .content .servicesBx img
+{
+    max-width: 80px;
+    filter: invert(1);
+    margin-bottom: 10px;
+}
+
+.services .content .servicesBx h2
+{
+    font-weight: 550;
+    font-size: 2.0em;
+    margin: 10px;
+}
+.services .content .servicesBx p
+{
+    font-size: 1.6em;
+    font-weight: 400;   
+    margin: 10px;
+}
+
+.work
+{
+    position: relative;
+    min-height: 100vh;
+    background: url("img/banner\ \(1\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0.9;
+}
+
+.work .heading h2
+{
+    color: #fff;
+}
+
+.work .content
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.content .workBx:hover
+{
+    background: #2196f3;
+    color: black;
+}
+.content .workBx
+{
+    padding: 40px 20px;
+    background: black;
+    color: #fff;
+    width: 340px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    border: 2px solid  #2196f3;
+}
+.workBx h2
+{
+    font-weight: 550;
+    font-size: 3.0em;
+    margin: 10px;
+}
+
+.workBx ul li
+{
+    list-style: none;  
+    font-size: 1.4em;
+    margin: 10px;
+}
