@@ -10,23 +10,21 @@
 <body>
      <header>
          <a href="#" class="logo">| PORTFOLIO |</a>
-         <div class="toggle">
-             <ul>
+         <div class="toggle" onclick="toggleMenu()"></div>
+             <ul class="menu">
                  <li><a href="#home">Home</a></li>
                  <li><a href="#about">About</a></li>
                  <li><a href="#services">Services</a></li>
                  <li><a href="#work">Work</a></li>
-                 <li><a href="#projects">Projects</a></li>
-                 <li><a href="#testimonial">Testimonial</a></li>
                  <li><a href="#contact">Contact</a></li>
+                 <li><a href="#projects">Projects</a></li>
              </ul>
-         </div>
      </header>
 
      <section class="banner" id="home">
          <div class="textBx">
              <h2>Hello, I'm<br><span>Punit Parmar.</span></h2>
-              About</a>
+
              <h3>I'm FullStake Software and Web Develooper.</h3>
              <a href="#" class="btn">About Me</a>
          </div>
@@ -49,7 +47,7 @@
     <section class="services" id="services">
         <div class="heading">
             <h2>Our Services</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eaque voluptas,</p>
+            
         </div>
 
         <div class="content">
@@ -113,11 +111,80 @@
                 <li>Linux</li>
             </ul>
         </div>
-
-    </div>
-        
-      
+    </div>     
     </section>
     
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2>Contact Us</h2>
+        </div>
+        
+        <div class="content">
+            <div class="contactInfo">
+                <div class="conactInfoBx">
+                    <h3>Contact Info</h3>
+                    <div class="box">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>45445 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nam reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>123-343-3434</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>Punitparmar@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"></div>
+                        <div class="text">
+                            <h3>Links</h3>
+                             <img src="img/facebook.png" alt="">
+                             <img src="img/instagram.png" alt="">
+                             <img src="img/twitter.png" alt="">
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="formbx">
+                <form action="">
+                    <h3>Massage Me</h3>
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Your Massage" ></textarea>
+                    <a href="#" class="btn">SEND</a>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+   <div class="copyright">
+       <p>Copyright @ 2021 Punit Parmar. All Right R</p>
+   </div>
+
 </body>
 </html>
+
+
+<script>
+    function toggleMenu(){
+        
+        console.log("toggleMenu");
+        let menuToggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+        
+    }
+</script>
